@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:segmentedgroup="http://schemas.android.com/apk/res-auto">
+    <style name="SegmentedControlDefault" parent="RadioButton">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingLeft">0dp</item>
+        <item name="android:paddingRight">0dp</item>
+    </style>
+
+    <style name="SegmentedControlWide" parent="RadioButton">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingLeft">0dp</item>
+        <item name="android:paddingRight">0dp</item>
+    </style>
+
+    <style name="SegmentedControlGroupDefault">
+        <item name="android:gravity">center</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="sc_border_width">1dp</item>
+        <item name="sc_checked_text_color">@android:color/white</item>
+        <item name="sc_corner_radius">2dp</item>
+        <item name="sc_tint_color">@color/colorBlueLight</item>
+    </style>
+
+</resources>

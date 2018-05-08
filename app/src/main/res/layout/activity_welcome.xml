@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.constraint.Guideline
+        android:id="@+id/leadingGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="50dp"/>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/trailingGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="50dp"/>
+
+    <ImageView
+        android:id="@+id/imgImage"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/imgLogo"
+        android:background="@android:color/darker_gray"
+        android:src="@drawable/img_start"
+        android:scaleType="centerCrop"/>
+
+    <ImageView
+        android:id="@+id/imgLogo"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgImage"
+        app:layout_constraintBottom_toTopOf="@+id/lblTitle"
+        android:layout_marginTop="12dp"
+        android:src="@drawable/ic_start"
+        android:scaleType="center"
+        android:background="@drawable/bg_icon_start"/>
+
+    <com.wang.avi.AVLoadingIndicatorView
+        android:id="@+id/viewLoading"
+        style="@style/LoadingDefault"
+        app:layout_constraintBottom_toBottomOf="@+id/imgLogo"
+        app:layout_constraintEnd_toEndOf="@+id/imgLogo"
+        app:layout_constraintStart_toStartOf="@+id/imgLogo"
+        app:layout_constraintTop_toTopOf="@+id/imgLogo"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/lblTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:gravity="center"
+        android:text="@string/welcome_lbl_title"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintEnd_toEndOf="@+id/trailingGuideline"
+        app:layout_constraintStart_toStartOf="@+id/leadingGuideline"
+        app:layout_constraintTop_toBottomOf="@+id/imgLogo"
+        app:layout_constraintBottom_toTopOf="@+id/lblSubTitle"/>
+
+    <TextView
+        android:id="@+id/lblSubTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/welcome_lbl_subtitle"
+        android:gravity="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        app:layout_constraintEnd_toEndOf="@+id/trailingGuideline"
+        app:layout_constraintStart_toStartOf="@+id/leadingGuideline"
+        app:layout_constraintTop_toBottomOf="@+id/lblTitle"
+        app:layout_constraintBottom_toTopOf="@+id/textInputLayoutStudent"/>
+
+    <studio.carbonylgroup.textfieldboxes.TextFieldBoxes
+        android:id="@+id/textInputLayoutStudent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        app:layout_constraintEnd_toEndOf="@+id/trailingGuideline"
+        app:layout_constraintStart_toStartOf="@+id/leadingGuideline"
+        app:layout_constraintTop_toBottomOf="@id/lblSubTitle"
+        app:layout_constraintBottom_toTopOf="@+id/textInputLayoutCourse"
+        app:primaryColor="@color/colorAccent"
+        app:secondaryColor="@color/colorAccent"
+        app:useDenseSpacing="true"
+        app:labelText="@string/welcome_txt_student_number">
+
+        <studio.carbonylgroup.textfieldboxes.ExtendedEditText
+            android:id="@+id/txtStudentNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textCapCharacters"
+            android:textColor="@android:color/black"
+            android:maxLength="6"
+            />
+
+    </studio.carbonylgroup.textfieldboxes.TextFieldBoxes>
+
+    <studio.carbonylgroup.textfieldboxes.TextFieldBoxes
+        android:id="@+id/textInputLayoutCourse"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        app:layout_constraintEnd_toEndOf="@+id/trailingGuideline"
+        app:layout_constraintStart_toStartOf="@+id/leadingGuideline"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayoutStudent"
+        app:layout_constraintBottom_toTopOf="@+id/btnStart"
+        app:primaryColor="@color/colorAccent"
+        app:secondaryColor="@color/colorAccent"
+        app:useDenseSpacing="true"
+        app:labelText="@string/welcome_txt_course_code">
+
+        <studio.carbonylgroup.textfieldboxes.ExtendedEditText
+            android:id="@+id/txtCourse"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="6dp"
+            android:inputType="text"
+            android:textColor="@android:color/black"
+            />
+
+    </studio.carbonylgroup.textfieldboxes.TextFieldBoxes>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_arrow_right"
+        app:layout_constraintTop_toTopOf="@+id/textInputLayoutCourse"
+        app:layout_constraintBottom_toBottomOf="@+id/textInputLayoutCourse"
+        app:layout_constraintEnd_toEndOf="@+id/textInputLayoutCourse"
+        android:tint="@color/colorAccent"/>
+
+    <Button
+        android:id="@+id/btnStart"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/bg_start_button"
+        android:text="@string/welcome_btn_start"
+        android:textColor="@android:color/white"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintEnd_toStartOf="@+id/trailingGuideline"
+        app:layout_constraintStart_toStartOf="@+id/leadingGuideline"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayoutCourse"/>
+
+    <FrameLayout
+        android:id="@+id/rootLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</android.support.constraint.ConstraintLayout>

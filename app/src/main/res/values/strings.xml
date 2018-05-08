@@ -1,0 +1,55 @@
+<resources>
+    <string name="app_name">Dynamic Feedback App</string>
+
+    <string name="welcome_lbl_title">Welcome</string>
+    <string name="welcome_lbl_subtitle">Dynamic Feedback System\nAalto University</string>
+
+    <string name="welcome_txt_student_number">Student Number</string>
+    <string name="welcome_txt_course_code">Course</string>
+
+    <string name="welcome_btn_start">Start</string>
+
+    <string name="courses_lbl_title">Select a course</string>
+
+    <string name="general_btn_next">Next</string>
+    <string name="general_btn_back">Previous</string>
+    <string name="general_btn_submit">Submit</string>
+    <string name="general_btn_ok">OK</string>
+
+    <string name="general_error_title">Error</string>
+    <string name="general_error_message">An error has occurred. Please try again</string>
+
+    <string name="drawer_open" translatable="false">Drawer open</string>
+    <string name="drawer_close" translatable="false">Drawer closed</string>
+
+    <string name="concept_key_feeling_title">Feeling</string>
+    <string name="concept_key_feeling_a">Negative</string>
+    <string name="concept_key_feeling_b">Neutral</string>
+    <string name="concept_key_feeling_c">Positive</string>
+
+    <string name="concept_key_significance_title">Significance</string>
+    <string name="concept_key_significance_a">Not Important</string>
+    <string name="concept_key_significance_b">Neutral</string>
+    <string name="concept_key_significance_c">Important</string>
+
+    <string name="concept_key_mastery_title">Mastery</string>
+    <string name="concept_key_mastery_a">Never heard</string>
+    <string name="concept_key_mastery_b">Familiar</string>
+    <string name="concept_key_mastery_c">Got it</string>
+
+    <string name="concept_key_comments_title">Comments</string>
+    <string name="concept_key_comments_hint">Notes, expectations, feedback…?</string>
+
+    <string name="page_intro_title">Introduction</string>
+
+    <string name="page_intro_desc">Let\'s hear your thoughts about course content.\n\nTry to be as honest as you can. Only group level statistics on your answers will be visible.</string>
+
+    <string name="page_submit_title">Submit</string>
+    <string name="page_submit_title_feeling">F</string>
+    <string name="page_submit_title_significance">S</string>
+    <string name="page_submit_title_mastery">M</string>
+
+    <string name="page_submit_success_title">Thanks</string>
+    <string name="page_submit_success_message">Your feedback was uploaded successfully</string>
+
+</resources>

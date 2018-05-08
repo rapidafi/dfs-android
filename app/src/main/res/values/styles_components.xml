@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="LoadingDefault" parent="AVLoadingIndicatorView.Large">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="indicatorName">BallClipRotateIndicator</item>
+        <item name="indicatorColor">@color/colorPrimary</item>
+    </style>
+
+</resources>

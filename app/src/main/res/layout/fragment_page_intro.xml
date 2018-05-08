@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.constraint.Guideline
+        android:id="@+id/leadingGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="24dp"/>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/trailingGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="24dp"/>
+
+    <ImageView
+        android:id="@+id/imgImage"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/imgLogo"
+        android:background="@android:color/darker_gray"
+        android:src="@drawable/img_intro"
+        android:scaleType="centerCrop"/>
+
+    <ImageView
+        android:id="@+id/imgLogo"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgImage"
+        app:layout_constraintBottom_toTopOf="@+id/lblTitle"
+        android:layout_marginTop="24dp"
+        android:src="@drawable/ic_intro"
+        android:tint="@color/colorBlueDark"
+        android:scaleType="center"/>
+
+    <TextView
+        android:id="@+id/lblTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:gravity="center"
+        android:text="Test"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintEnd_toEndOf="@+id/trailingGuideline"
+        app:layout_constraintStart_toStartOf="@+id/leadingGuideline"
+        app:layout_constraintTop_toBottomOf="@+id/imgLogo"
+        app:layout_constraintBottom_toTopOf="@+id/lblSubTitle"/>
+
+    <TextView
+        android:id="@+id/lblSubTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:layout_marginBottom="36dp"
+        android:text="@string/page_intro_desc"
+        android:gravity="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        app:layout_constraintEnd_toEndOf="@+id/trailingGuideline"
+        app:layout_constraintStart_toStartOf="@+id/leadingGuideline"
+        app:layout_constraintTop_toBottomOf="@+id/lblTitle"
+        app:layout_constraintBottom_toTopOf="@+id/btnNext"/>
+
+    <Button
+        android:id="@+id/btnNext"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="6dp"
+        android:background="@color/colorNext"
+        android:text="@string/general_btn_next"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/trailingGuideline"
+        app:layout_constraintStart_toEndOf="@+id/leadingGuideline"/>
+
+</android.support.constraint.ConstraintLayout>

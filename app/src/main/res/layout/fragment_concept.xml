@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.constraint.Guideline
+        android:id="@+id/leadingGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="24dp"/>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/trailingGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="24dp"/>
+
+    <TextView
+        android:id="@+id/lblFeeling"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="@string/concept_key_feeling_title"
+        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+        app:layout_constraintEnd_toStartOf="@+id/trailingGuideline"
+        app:layout_constraintStart_toEndOf="@+id/leadingGuideline"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <info.hoang8f.android.segmented.SegmentedGroup
+        android:id="@+id/segmentedLayoutFeeling"
+        style="@style/SegmentedControlGroupDefault"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        app:layout_constraintEnd_toStartOf="@+id/trailingGuideline"
+        app:layout_constraintStart_toEndOf="@+id/leadingGuideline"
+        app:layout_constraintTop_toBottomOf="@+id/lblFeeling">
+
+        <RadioButton
+            android:id="@+id/segmentedFeeling0"
+            style="@style/SegmentedControlWide"
+            android:text="@string/concept_key_feeling_a"/>
+
+        <RadioButton
+            android:id="@+id/segmentedFeeling1"
+            style="@style/SegmentedControlWide"
+            android:text="@string/concept_key_feeling_b"/>
+
+        <RadioButton
+            android:id="@+id/segmentedFeeling2"
+            style="@style/SegmentedControlWide"
+            android:text="@string/concept_key_feeling_c"/>
+
+    </info.hoang8f.android.segmented.SegmentedGroup>
+
+    <TextView
+        android:id="@+id/lblSignificance"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="@string/concept_key_significance_title"
+        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+        app:layout_constraintEnd_toStartOf="@+id/trailingGuideline"
+        app:layout_constraintStart_toEndOf="@+id/leadingGuideline"
+        app:layout_constraintTop_toBottomOf="@+id/segmentedLayoutFeeling"/>
+
+    <info.hoang8f.android.segmented.SegmentedGroup
+        android:id="@+id/segmentedLayoutSignificance"
+        style="@style/SegmentedControlGroupDefault"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        app:layout_constraintEnd_toStartOf="@+id/trailingGuideline"
+        app:layout_constraintStart_toEndOf="@+id/leadingGuideline"
+        app:layout_constraintTop_toBottomOf="@+id/lblSignificance">
+
+        <RadioButton
+            android:id="@+id/segmentedSignificance0"
+            style="@style/SegmentedControlWide"
+            android:text="@string/concept_key_significance_a"/>
+
+        <RadioButton
+            android:id="@+id/segmentedSignificance1"
+            style="@style/SegmentedControlWide"
+            android:text="@string/concept_key_significance_b"/>
+
+        <RadioButton
+            android:id="@+id/segmentedSignificance2"
+            style="@style/SegmentedControlWide"
+            android:text="@string/concept_key_significance_c"/>
+
+    </info.hoang8f.android.segmented.SegmentedGroup>
+
+    <TextView
+        android:id="@+id/lblMastery"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="@string/concept_key_mastery_title"
+        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+        app:layout_constraintEnd_toStartOf="@+id/trailingGuideline"
+        app:layout_constraintStart_toEndOf="@+id/leadingGuideline"
+        app:layout_constraintTop_toBottomOf="@+id/segmentedLayoutSignificance"/>
+
+    <info.hoang8f.android.segmented.SegmentedGroup
+        android:id="@+id/segmentedLayoutMastery"
+        style="@style/SegmentedControlGroupDefault"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        app:layout_constraintEnd_toStartOf="@+id/trailingGuideline"
+        app:layout_constraintStart_toEndOf="@+id/leadingGuideline"
+        app:layout_constraintTop_toBottomOf="@+id/lblMastery">
+
+        <RadioButton
+            android:id="@+id/segmentedMastery0"
+            style="@style/SegmentedControlWide"
+            android:text="@string/concept_key_mastery_a"/>
+
+        <RadioButton
+            android:id="@+id/segmentedMastery1"
+            style="@style/SegmentedControlWide"
+            android:text="@string/concept_key_mastery_b"/>
+
+        <RadioButton
+            android:id="@+id/segmentedMastery2"
+            style="@style/SegmentedControlWide"
+            android:text="@string/concept_key_mastery_c"/>
+
+    </info.hoang8f.android.segmented.SegmentedGroup>
+
+    <TextView
+        android:id="@+id/lblComments"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="@string/concept_key_comments_title"
+        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+        app:layout_constraintEnd_toStartOf="@+id/trailingGuideline"
+        app:layout_constraintStart_toEndOf="@+id/leadingGuideline"
+        app:layout_constraintTop_toBottomOf="@+id/segmentedLayoutMastery"/>
+
+    <studio.carbonylgroup.textfieldboxes.TextFieldBoxes
+        android:id="@+id/textInputLayoutComments"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="12dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnBack"
+        app:layout_constraintEnd_toStartOf="@+id/trailingGuideline"
+        app:layout_constraintStart_toEndOf="@+id/leadingGuideline"
+        app:layout_constraintTop_toBottomOf="@+id/lblComments"
+        app:primaryColor="@color/colorBlueLight"
+        app:secondaryColor="@color/colorBlueLight"
+        app:useDenseSpacing="true">
+
+        <studio.carbonylgroup.textfieldboxes.ExtendedEditText
+            android:id="@+id/txtComment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="6dp"
+            android:inputType="textMultiLine"
+            android:hint="@string/concept_key_comments_hint"
+            android:textColor="@android:color/black"
+            />
+
+    </studio.carbonylgroup.textfieldboxes.TextFieldBoxes>
+
+    <Button
+        android:id="@+id/btnBack"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="6dp"
+        android:background="@color/colorBack"
+        android:text="@string/general_btn_back"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/viewMiddle"
+        app:layout_constraintStart_toStartOf="@+id/leadingGuideline"/>
+
+    <Button
+        android:id="@+id/btnNext"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="6dp"
+        android:background="@color/colorNext"
+        android:text="@string/general_btn_next"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/trailingGuideline"
+        app:layout_constraintStart_toStartOf="@+id/viewMiddle"/>
+
+    <View
+        android:id="@+id/viewMiddle"
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+</android.support.constraint.ConstraintLayout>
